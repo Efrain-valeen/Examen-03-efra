@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS registro_estudiantes CHARACTER SET utf8mb4;
+USE registro_estudiantes;
+
+CREATE TABLE IF NOT EXISTS estudiante (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    matricula VARCHAR(20) NOT NULL UNIQUE,
+    carrera VARCHAR(100) NOT NULL,
+    semestre SMALLINT NOT NULL,
+    correo VARCHAR(100) NOT NULL
+);
